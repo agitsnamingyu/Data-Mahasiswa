@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Manajemen Data Mahasiswa</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+<h2 class="judul">Manajemen Data Mahasiswa</h2>
+<h3 class="subjudul">Tambah Data Mahasiswa</h3>
+
+<div class="form-box">
+  <input id="nameInput" placeholder="Nama Mahasiswa">
+  <input id="nimInput" placeholder="NIM">
+  <input id="emailInput" placeholder="Email">
+  <input id="majorInput" placeholder="Jurusan">
+  <input id="gpaInput" placeholder="GPA (0.00 - 4.00)" type="number" step="0.01">
+  <button class="primary" onclick="addStudent()">Tambah</button>
+</div>
+
+<div id="panel">
+  <button class="primary" onclick="sortByName()">Sort Nama</button>
+  <button class="primary" onclick="sortByNIM()">Sort NIM</button>
+  <button class="secondary" onclick="sortByGPA()">Sort GPA</button>
+  <button class="secondary" onclick="sortByMajor()">Sort Jurusan</button>
+  <button class="danger" onclick="resetData()">Reset ke Default</button>
+  <br>
+  <input id="search" placeholder="Cari nama, NIM, jurusan..." class="search">
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>NIM</th>
+  <th>Nama</th>
+  <th>Email</th>
+  <th>Jurusan</th>
+  <th>GPA</th>
+  <th>Aksi</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
